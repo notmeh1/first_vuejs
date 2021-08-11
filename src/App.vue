@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h1 class="text-center">Tabla de Usuarios</h1>
-    <table id="table">
+    <table class="table">
       <thead>
         <tr>
           <th scope="col">#</th>
@@ -15,11 +15,11 @@
       <tbody>
         <tr v-for="(persona, $index) of personas" :key="$index">
           <th scope="row">{{ $index }}</th>
-          <td>{{ personas.nombre }}</td>
-          <td>{{ personas.apellido }}</td>
-          <td>{{ personas.run }}</td>
-          <td>{{ personas.nacimiento }}</td>
-          <td>{{ personas.edad }}</td>
+          <td>{{ persona.nombre }}</td>
+          <td>{{ persona.apellido }}</td>
+          <td>{{ persona.run }}</td>
+          <td>{{ persona.nacimiento }}</td>
+          <td>{{ persona.edad }}</td>
         </tr>
       </tbody>
     </table>
@@ -27,9 +27,9 @@
 </template>
 
 <script>
-const table = new Vue({
-  el: "#table",
-  data: {
+export default {
+  name: "App",
+  data: () => ({
     personas: [
       {
         nombre: "Jose",
@@ -53,8 +53,8 @@ const table = new Vue({
         edad: 60,
       },
     ],
-  },
-});
+  }),
+};
 </script>
 
 <style></style>
