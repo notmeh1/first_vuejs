@@ -1,5 +1,7 @@
 # first_vuejs
 
+// Fernando Vargas
+
 ## Project setup
 ```
 npm install
